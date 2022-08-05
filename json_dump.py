@@ -37,26 +37,26 @@ def delete_admin(id):
             return False
 
 def change_number():
-    with open('kostil.json') as json_file1:
+    with open('numeber_data.json') as json_file1:
         data1 = json.load(json_file1)
         data1['number'] = data1['number'] + 1
-        with open('kostil.json', 'w') as json_file1:
+        with open('numeber_data.json', 'w') as json_file1:
             json.dump(data1, json_file1)
 
 def get_number():
-    with open('kostil.json') as json_file1:
+    with open('numeber_data.json') as json_file1:
         data1 = json.load(json_file1)
     return data1['number']
 
 def work_in_porcess(id, number, q_id):
-    with open('kostil.json') as json_file1:
+    with open('numeber_data.json') as json_file1:
         data1 = json.load(json_file1)
-        with open('kostil.json', 'w') as json_file1:
+        with open('numeber_data.json', 'w') as json_file1:
             data1[id] = [number, q_id]
             json.dump(data1, json_file1)
 
 def qvs_id(id):
-    with open('kostil.json') as json_file1:
+    with open('numeber_data.json') as json_file1:
         data1 = json.load(json_file1)
     return data1[id][1]
 
